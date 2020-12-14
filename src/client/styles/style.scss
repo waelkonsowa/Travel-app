@@ -1,0 +1,163 @@
+
+// 
+// 
+// 
+/* general */
+// 
+// 
+// 
+
+body{
+    font-size: 12sp;
+    background: url("../views/img/img1.jpg");
+
+}
+
+nav, footer, section{
+    // border:2px solid red;
+}
+
+div, p, button, 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+h4{
+    font-weight: normal;
+}
+
+.centered_text{
+    text-align: center;
+}
+
+section{
+    padding: 10px;
+}
+
+// 
+// 
+// 
+/* book page */
+// 
+// 
+// 
+
+#trip_data_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#trip_data_form label{
+    text-align: center;
+    padding:10px;
+}
+
+#trip_data_form input , #trip_data_submit {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: olive;
+    padding:10px;
+    font-size: .8em;
+    text-align: center;
+}
+
+#trip_data_submit{
+    background-color: #4CAF50 ;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    /* font-size: .5em; */
+}
+
+#trip_data_submit:hover{
+    opacity: .8;
+}
+
+// 
+// 
+// 
+/* trip details page */
+// 
+// 
+// 
+
+#trip_details_container{
+    background:rgba(0, 0, 0, 0.562) !important;
+    border-radius: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#trip_details_container div{
+    margin-top: .3em;
+}
+
+#dest_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+#remove_trip{
+    background-color:#ff0000d2;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    font-size: 1em;
+    margin-top: 15px;
+    border-radius: 20px;
+    /* font-size: .5em; */
+}
+
+#remove_trip:hover{
+    opacity: .8;
+}
+
+.dynamic_content{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.invisible{
+     display: none !important; 
+}
+
+// 
+// 
+// 
+/* Media queries */
+// 
+// 
+// 
+
+@media (min-width:600px) and (max-width:900px){
+    
+}
+
+@media (min-width:901px){
+    #trip_data_form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+    }
+}
+

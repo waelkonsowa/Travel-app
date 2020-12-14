@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travel app</title>
+    <meta charset="UTF-8">
+    </meta>
+
+    <!-- link html fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- whole app page -->
+
+    <div id="page">
+
+        <!-- navigation bar & logo -->
+
+        <nav>
+            <div id="logo">Travel</div>
+            <ul id="nav-menu">
+                <li class="nav-menu-item"> Trips </li>
+                <li class="nav-menu-item"> Support </li>
+            </ul>
+        </nav>
+
+        <!-- page for enter trip data -->
+
+        <section id="book-page">
+            <h1 class="centered_text" style="font-size: 3em;">
+                BOOK UNIQUE EXPERIENCES
+            </h1>
+            <h4 class="centered_text">
+                explore top rated tours around the world
+            </h4>
+            <form id="trip_data_form">
+                <input type="text" name="from" id="from_place" placeholder="From" autocomplete="off" required>
+                <input type="text" name="to" id="to_place" placeholder="To" autocomplete="off" required>
+                <!-- <label for="travel_date"> departing on </label> -->
+                <input type="date" name="date" id="travel_date" required>
+                <input type="submit" id="trip_data_submit">
+            </form>
+        </section>
+
+        <!-- page for display trip data & results-->
+
+        <section id="trip-details-page" class="invisible">
+            <div id="trip_details_container">
+
+                <!-- trip image-->
+
+                <div id="dest_image_holder">
+                    <img id="dest_image" src="img/img1.jpg" alt="destination photo">
+                </div>
+
+                <!-- trip data-->
+
+                <div id="trip_details">
+                    <div id="boarding_details">You are boarding from:
+                        <span class="dynamic_content" id="boarding">egypt</span></div>
+                    <div id="destination_details">You are going to: <span class="dynamic_content"
+                            id="destination">france</span></div>
+                    <div id="departure_details">Departing on: <span class="dynamic_content"
+                            id="departing_date">01/01/2020</span></div>
+                    <div id="days_to_go_details">Days to go <span class="dynamic_content" id="number_of_days">10</span>
+                    </div>
+                    <div id="temperature_details">Expect weather to be <span class="dynamic_content" id="temperature">20
+                            &#8451;</span> , mostly
+                        <span class="dynamic_content" id="weather">Sunny</span>.</div>
+                </div>
+
+            </div>
+
+            <!-- remove trip data-->
+
+            <div>
+                <button class="button_style" id="remove_trip">Remove</button>
+            </div>
+        </section>
+
+        <!-- footer -->
+
+        <footer>
+            <div> made by <span> meemsquad </span> @2020 </div>
+        </footer>
+    </div>
+
+    <!-- serviceWorker  -->
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

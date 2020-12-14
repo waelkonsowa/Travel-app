@@ -1,0 +1,20 @@
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    opacity: .8;
+}
+
+footer div{
+    margin-top: 20px;
+}
+
+footer span{
+    font-weight: bold;
+    font-size: 1.2em !important; 
+}
